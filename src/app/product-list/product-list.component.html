@@ -1,21 +1,27 @@
-<img [src]="product.pImage">                
+<!-- <img [src]="product.pImage">                
 <p>Name: {{product.name}}</p>
 <p>price:{{'$' + product.price}}</p>
-<p>color:{{product.color}}</p>
+<p>color:{{product.color}}</p> -->
+
+
+
 <!-- <p>Discounted Price:{{product.price - (product.price * product.discount /100) }}</p>  -->
 <!-- any typescript expression can done inside double square brackets -->
-<p>Discounted Price:{{ '$' + getDiscountedPrice().toFixed(2) }}</p>
-<p>{{product.inStock>0?'only ' + product.inStock + ' items left':'out of stock'}}</p> 
 
-<button [disabled]="!(product.inStock > 0)">buy now</button>
+<!-- 
+<p>Discounted Price:{{ '$' + getDiscountedPrice().toFixed(2) }}</p>
+<p>{{product.inStock>0?'only ' + product.inStock + ' items left':'out of stock'}}</p>  -->
+
+<!-- <button [disabled]="!(product.inStock > 0)">buy now</button> -->
 <!-- disabled hidden src checked -->
 
-<input type="text" (input)="onInput($event)">
-<p>name:{{name}}</p>
+<!-- <input type="text" (input)="onInput($event)">
+<p>name:{{name}}</p> -->
 <!-- whenever an event happens there a  is $event object is created   -->
 
 
-<button (click)='incrementValueCart()'>+</button>
+<!-- <button (click)='incrementValueCart()'>+</button>
 <span>{{itemsInCart}}</span>
-<button (click)='decrementValueCart()'>-</button>
+<button (click)='decrementValueCart()'>-</button> -->
 
+<app-search></app-search>
