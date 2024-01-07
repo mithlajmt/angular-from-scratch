@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  itemsInCart:number = 0
+  name:string = 'mithlaj mattathodi'
   product= {
     name : 'iphone 13',
     price : 789,
@@ -17,6 +19,20 @@ export class ProductListComponent {
 
   getDiscountedPrice(){
     return this.product.price - (this.product.price*this.product.discount/100)
+  }
+
+  onInput(event:any){
+    this.name =  event.target.value
+    // console.log(event);
+  }
+
+  incrementValueCart(){
+    if(this.itemsInCart<this.product.inStock)
+    this.itemsInCart++
+  } 
+   decrementValueCart(){
+    if(this.itemsInCart>0)
+    this.itemsInCart--
   }
 }
 

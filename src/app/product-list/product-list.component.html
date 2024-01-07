@@ -9,3 +9,13 @@
 
 <button [disabled]="!(product.inStock > 0)">buy now</button>
 <!-- disabled hidden src checked -->
+
+<input type="text" (input)="onInput($event)">
+<p>name:{{name}}</p>
+<!-- whenever an event happens there a  is $event object is created   -->
+
+
+<button (click)='incrementValueCart()'>+</button>
+<span>{{itemsInCart}}</span>
+<button (click)='decrementValueCart()'>-</button>
+
