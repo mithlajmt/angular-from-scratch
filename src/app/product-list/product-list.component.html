@@ -1,0 +1,8 @@
+<p>Name: {{product.name}}</p>
+<p>price:{{'$' + product.price}}</p>
+<p>color:{{product.color}}</p>
+<!-- <p>Discounted Price:{{product.price - (product.price * product.discount /100) }}</p>  -->
+<!-- any typescript expression can done inside double square brackets -->
+<p>Discounted Price:{{ '$' + getDiscountedPrice().toFixed(2) }}</p>
+<p>{{product.inStock>0?'only ' + product.inStock + ' items left':'out of stock'}}</p> 
+
