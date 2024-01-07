@@ -1,0 +1,49 @@
+<!-- <div class="ekart--product--container"> -->
+    <!-- <img [src]="product.pImage">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{product.inStock > 0 ? 'Only' + product.inStock +' items left': 'Not in Stock'}}</p>
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="incrementCartValue()">+</button>
+    <input (input)="onNameChange($event)"><br>
+    <p>name={{name}}</p> -->
+    <app-search></app-search>
+<!-- </div> -->
+
+<!--Disabled, Hidden, Checked-->
+
+
+<div class="ekart--product--container">
+    <div class="ekart--product--item" *ngFor='let prod of products'>
+      <div class="ekart-wishlist-sale-container">
+        <div class="ekart--add--to--wishlist">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="ekart-on-sale-tag" *ngIf="prod.discountPrice" >75% OFF</div>
+  
+      <div class="ekart--product--image">
+        <img [src]="prod.imageURL" class="ekart--product--image" alt="{{prod.name}} Image">
+      </div>
+  
+      <div class="ekart--add--to--price">
+        {{prod.price}}
+      </div>
+  
+      <div class="ekart--product--name">
+        {{prod.name}}
+      </div>
+  
+      <div class="ekart--product--category">
+        {{prod.gender}} . {{prod.category}} . {{prod.brand}}
+      </div>
+  
+      <div class="ekart--product--available-colors">
+        {{prod.color.length}} Colors . Best Seller
+      </div>
+    </div>
+  </div>
+  
