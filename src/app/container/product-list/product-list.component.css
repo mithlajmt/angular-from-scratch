@@ -13,3 +13,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px; /* Adjust the gap between columns */
   }
+  .product-grid {
+    display: grid; /* Or display: flex; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust as needed */
+    gap: 10px; /* Adjust spacing */
+  }
+  

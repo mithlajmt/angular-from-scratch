@@ -15,9 +15,15 @@
 
 <!--Disabled, Hidden, Checked-->
 
-
-<div class="ekart--product--container">
-<app-products *ngFor="let item of products" [product]="item"></app-products>
+<app-filter [all]="totalProducts" 
+            [inStock]="productInStock"
+            [outOfStock]="productOutOfStock"
+             (radioButtonChanged)="onFilterChanged($event)"> </app-filter>
+<!-- also send it in group  its the best alternaive go check it out -->
+<div class="ekart--product--container product-grid">
+  <div *ngFor="let item of products">
+      <app-products  [product]="item" *ngIf="selectedFilterRadioButton ==='all'|| item.is_in_inventory.toString() ===selectedFilterRadioButton"></app-products>
+  </div>
   </div>
   
 
