@@ -20,7 +20,7 @@
              (radioButtonChanged)="onFilterChanged($event)"> </app-filter>
 <!-- also send it in group  its the best alternaive go check it out -->
 <div class="ekart--product--container product-grid">
-  <div *ngFor="let item of products">
+  <div *ngFor="let item of products" (click)="selectedProduct=item">
       <!-- <app-products  [product]="item" *ngIf="selectedFilterRadioButton ==='all'|| item.is_in_inventory.toString() === selectedFilterRadioButton"></app-products> -->
       <app-products  [product]="item" *ngIf="searchTextValue ===''|| item.name.toLowerCase().includes(searchTextValue)"></app-products>
 
