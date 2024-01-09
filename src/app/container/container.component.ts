@@ -34,5 +34,11 @@ export class containerComponent {
     if(this.itemsInCart>0)
     this.itemsInCart--
   }
+
+  searchText:string=''
+
+  setSearchText(value:any){
+    this.searchText=value
+  }
 }
 

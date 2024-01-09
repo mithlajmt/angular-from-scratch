@@ -24,5 +24,6 @@
 <span>{{itemsInCart}}</span>
 <button (click)='decrementValueCart()'>-</button> -->
 
-<!-- <app-search></app-search> -->
-<app-product-list></app-product-list>
+<app-search (searchTextChanged)="setSearchText($event)"></app-search>
+
+<app-product-list [searchTextValue]="searchText" ></app-product-list>

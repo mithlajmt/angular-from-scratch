@@ -10,7 +10,6 @@
     <button (click)="incrementCartValue()">+</button>
     <input (input)="onNameChange($event)"><br>
     <p>name={{name}}</p> -->
-    <app-search></app-search>
 <!-- </div> -->
 
 <!--Disabled, Hidden, Checked-->
@@ -22,7 +21,9 @@
 <!-- also send it in group  its the best alternaive go check it out -->
 <div class="ekart--product--container product-grid">
   <div *ngFor="let item of products">
-      <app-products  [product]="item" *ngIf="selectedFilterRadioButton ==='all'|| item.is_in_inventory.toString() ===selectedFilterRadioButton"></app-products>
+      <!-- <app-products  [product]="item" *ngIf="selectedFilterRadioButton ==='all'|| item.is_in_inventory.toString() === selectedFilterRadioButton"></app-products> -->
+      <app-products  [product]="item" *ngIf="searchTextValue ===''|| item.name.toLowerCase().includes(searchTextValue)"></app-products>
+
   </div>
   </div>
   
