@@ -1,4 +1,5 @@
-<div class="ekart--product--item" >
+<div [ngClass]="'ekart--product--item ekart--product--item1'" appHighlight > 
+                                                     <!-- this div is basically the host  here    //we can access this element in this classe constructor -->
     <div class="ekart-wishlist-sale-container">
       <div class="ekart--add--to--wishlist">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -18,7 +19,7 @@
       {{product.name}}
     </div>
 
-    <div class="ekart--product--category">
+    <div class="ekart--product--category"> 
       {{product.gender}} . {{product.category}} . {{product.brand}}
     </div>
 

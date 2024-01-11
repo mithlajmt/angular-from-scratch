@@ -24,11 +24,9 @@ export class setBackground implements OnInit {
         // this.element.nativeElement.style.color = 'white';
         // console.log(this.element);
         // console.log(this.element.nativeElement);
-
-
-
+        
         this.Renderer.setStyle(this.element.nativeElement,'backgroundColor','#36454F')                          //FIRST PARAMETER IS ON WHICH ELEMENT  WE WANT TO ADD STYLES    //second is wht style we have to set in   //third argument is wht value to be given   // fourth param is optional param flex
         this.Renderer.setStyle(this.element.nativeElement,'color','white');
-        this.Renderer.setAttribute(this.element.nativeElement,'title','this is an example title from renderer two');
+        // this.Renderer.setAttribute(this.element.nativeElement,'title','this is an example title from renderer two');
     }
 }
