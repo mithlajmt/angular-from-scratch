@@ -11,9 +11,10 @@
             <h2>{{product.name}}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span>{{product.gender}}</span>
-            <span>{{product.brand}}</span>
-            <span>{{product.category}}</span>
+            <span setBackground >{{product.gender}}</span> 
+            <!-- here an instance of setBackround class will be created by the constructor of it (construct will be called)-->
+            <span setBackground >{{product.brand}}</span>
+            <span setBackground >{{product.category}}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p>
@@ -52,7 +53,10 @@
         </div>
     </div>
     <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart">ADD TO CART</button>
+        <button class="btn-add-to-cart" *ngIf="product.is_in_inventory; else notifyme" >ADD TO CART</button>
+        <ng-template #notifyme>
+            <button class="btn-add-to-cart" >NOTIFY ME</button>
+        </ng-template>
     </div>
 </div>
 <div class="overlay"></div>
