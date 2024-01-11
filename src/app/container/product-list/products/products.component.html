@@ -1,4 +1,4 @@
-<div [ngClass]="'ekart--product--item ekart--product--item1'" appHighlight > 
+<div [ngClass]="'ekart--product--item ekart--product--item1'" appHighlight [disableProduct]="!product.is_in_inventory" > 
                                                      <!-- this div is basically the host  here    //we can access this element in this classe constructor -->
     <div class="ekart-wishlist-sale-container">
       <div class="ekart--add--to--wishlist">
