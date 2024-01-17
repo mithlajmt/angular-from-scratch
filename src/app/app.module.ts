@@ -18,6 +18,7 @@ import { setBackground } from './customdirectives/background.directive';
 import { HighlightDirective } from './customdirectives/highlight.directive';
 import { AppHoverDirective } from './customdirectives/app-hover.directive';
 import { DisableproductDirective } from './customdirectives/disableproduct.directive';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DisableproductDirective } from './customdirectives/disableproduct.direc
     setBackground,
     HighlightDirective,
     AppHoverDirective,
-    DisableproductDirective
+    DisableproductDirective,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
